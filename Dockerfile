@@ -3,4 +3,6 @@ MAINTAINER Jeethu Rao <jeethu.rao@dubizzle.com>
 
 ENV LANG=C.UTF-8 DEBIAN_FRONTEND=noninteractive
 
-RUN /bin/bash scripts/install_pypy.sh
+COPY scripts/ /root/scripts/
+
+RUN /bin/bash /root/scripts/install_pypy.sh
